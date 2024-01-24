@@ -1,26 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Snake Game</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blub On Off
+    </title>
+    <style>
+        * {
+            text-align: center;
+            align-content: center;
+            
+        }
+
+        .buttn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 30px;
+            border-radius: 20px;
+
+        }
+    </style>
 </head>
+
 <body>
-	<div id="game-container">
-		<canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
-	</div>
-	<div class="keys">
-	  <a class="up arr" onclick="Snake.action('up')">
-	    <i class="chevron up"></i></a>
-	  <br />
-	  <a class="left arr" onclick="Snake.action('left')">
-	    <i class="chevron left"></i></a>
-	  <a class="down arr" onclick="Snake.action('down')">
-	    <i class="chevron down"></i></a>
-	  <a class="right arr" onclick="Snake.action('right')">
-	    <i class="chevron right"></i></a>
-	</div>
-	<script type="text/javascript" src="game.js"></script>
+    <h1>Abu Bakar siddique CCO-2625048 </h1>
+    <h1>Blub On-Off</h1>
+
+    <img id="bulbImg" src="./img/blub off.png" width="" alt="Blub">
+   
+    <br>
+   
+    <button class="buttn " id="off" onclick="blub_on()" >OFF </button>
+   
+    <script>
+
+    var flag = true 
+      
+        function blub_on() {
+            if(flag == true){
+                    document.getElementById("bulbImg").src='./img/blub on.png';
+                document.getElementById('off').innerHTML = 'ON'
+                 document.getElementById('off').style.backgroundColor='red'
+                 document.getElementById('off').style.color = 'yallow'
+                 document.getElementById('off').style.borderColor = 'red'
+
+                
+                flag=false
+            }else{
+                  document.getElementById("bulbImg").src = "./img/blub off.png";
+                document.getElementById('off').innerHTML = 'OFF '
+                 document.getElementById('off').style.backgroundColor = 'black'
+                 document.getElementById('off').style.borderColor = 'black'
+
+
+            
+                flag=true  
+
+            }
+            
+        }
+      
+
+
+
+    </script>
 </body>
+
 </html>
